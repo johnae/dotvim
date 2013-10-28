@@ -1,11 +1,8 @@
 " First ensure necessary directories are present
-if !filereadable(expand('~/.vim')) || !filereadable(expand('~/.vim/after'))
-  echo "Creating the .vim directory etc"
-  silent !mkdir -p ~/.vim/after 
-  silent !mkdir -p ~/.vim/backups
-  silent !mkdir -p ~/.vim/swaps
-  silent !mkdir -p ~/.vim/undo
-endif
+silent !mkdir -p ~/.vim/after 
+silent !mkdir -p ~/.vim/backups
+silent !mkdir -p ~/.vim/swaps
+silent !mkdir -p ~/.vim/undo
 
 " Preamble
 set nocompatible
