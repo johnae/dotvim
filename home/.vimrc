@@ -1,3 +1,12 @@
+" First ensure necessary directories are present
+if !filereadable(expand('~/.vim')) || !filereadable(expand('~/.vim/after'))
+  echo "Creating the .vim directory etc"
+  silent !mkdir -p ~/.vim/after 
+  silent !mkdir -p ~/.vim/backups
+  silent !mkdir -p ~/.vim/swaps
+  silent !mkdir -p ~/.vim/undo
+endif
+
 " Preamble
 set nocompatible
 filetype off
@@ -202,6 +211,11 @@ map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
+
+" Insert newline without also entering insert mode
+" Enter and Shift-Enter
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
 
 " Use Q for formatting the current paragraph (or selection)
 " vmap Q gq
