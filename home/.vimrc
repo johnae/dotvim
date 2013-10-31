@@ -220,6 +220,11 @@ nmap <CR> o<Esc>k
 " Use Q to reindent file
 nmap Q gg=G
 
+" If the current buffer has never been saved, it will have no name,
+" call the file browser to save it, otherwise just save it.
+inoremap <silent> <C-S> <esc> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>a
+nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
+
 " Map jk to escape for quick exit to command mode
 " imap jk <Esc>
 
