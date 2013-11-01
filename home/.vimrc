@@ -91,6 +91,9 @@ set autowrite
 " Set to auto read when a file is changed from the outside
 set autoread              
 
+" Allow hidden buffers (eg. not needing to save to switch)
+:set hidden
+
 " Show matching parenthesis etc
 set showmatch
 
