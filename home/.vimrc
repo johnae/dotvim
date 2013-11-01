@@ -225,8 +225,8 @@ nmap Q gg=G
 
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
-inoremap <silent> <C-S> <esc> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>a
-nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>
+inoremap <silent> <C-S> <esc> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR>i
+nnoremap <silent> <C-S> :if expand("%") == ""<CR>browse confirm w<CR>else<CR>confirm w<CR>endif<CR><return>
 
 " Map jk to escape for quick exit to command mode
 " imap jk <Esc>
@@ -442,8 +442,8 @@ set ffs=unix,dos,mac  " Use Unix as the standard file type
 " NERDTree toggle
 nmap <silent> <C-D> :NERDTreeToggle<CR>
 " open nerdtree on startup
-autocmd vimenter * if &filetype !=# 'gitcommit' && &filetype !=# 'mail' | NERDTree | endif
-" open nerdtree even when vim was opened with no file arg
+" autocmd vimenter * if &filetype !=# 'gitcommit' && &filetype !=# 'mail' | NERDTree | endif
+" open nerdtree when vim was opened with no file arg
 autocmd vimenter * if !argc() && &filetype !=# 'gitcommit' && &filetype !=# 'mail' | NERDTree | endif
 " close vim when only NERDTree left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
