@@ -371,6 +371,7 @@ nnoremap <leader>. :Unite tag<cr>
 " noremap <Leader>p :Unite -start-insert file_rec/async<CR>
 nnoremap <leader>c :Unite colorscheme -auto-preview<cr>
 
+" jump back and forth between two files using leader leader
 map <leader><leader> <C-^>
 
 autocmd FileType unite call s:unite_settings()
