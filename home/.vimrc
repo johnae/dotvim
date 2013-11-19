@@ -76,6 +76,12 @@ NeoBundle "myusuf3/numbers.vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "henrik/vim-ruby-runner"
 
+" Run async commands
+NeoBundle 'tpope/vim-dispatch'
+
+" Run rspec from vim
+NeoBundle 'thoughtbot/vim-rspec'
+
 
 " Show line numbers
 set number
@@ -475,8 +481,15 @@ autocmd FileType c,cpp,java,php,ruby,javascript,rspec autocmd BufWritePre <buffe
 "
 nnoremap <silent> <Leader>+ :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
-nnoremap <silent> <Leader>tt :w\|!bundle exec rspec <cr>
-nnoremap <silent> <Leader>t :w\|!bundle exec rspec %<cr>
+" nnoremap <silent> <Leader>tt :w\|!bundle exec rspec <cr>
+" nnoremap <silent> <Leader>t :w\|!bundle exec rspec %<cr>
+
+" run rspec async
+let g:rspec_command = "Dispatch bundle exec rspec -f p --color {spec}"
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 " Installation check.
 NeoBundleCheck
