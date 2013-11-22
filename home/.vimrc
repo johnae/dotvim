@@ -371,7 +371,7 @@ call unite#filters#sorter_default#use(['sorter_rank'])
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>y :Unite history/yank<cr>
 " nnoremap <leader>f :Unite file_rec<cr>
-nnoremap <C-P> :<C-u>Unite -resume -buffer-name=files -start-insert buffer file_rec/async:!<cr>
+nnoremap <C-P> :<C-u>Unite -resume -no-split -buffer-name=files -start-insert buffer file_rec/async:!<cr>
 " Ctrl-p behaviour
 nnoremap <leader>. :Unite tag<cr>
 " noremap <Leader>p :Unite -start-insert file_rec/async<CR>
