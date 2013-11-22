@@ -485,7 +485,15 @@ nnoremap <silent> <Leader>- :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 " nnoremap <silent> <Leader>t :w\|!bundle exec rspec %<cr>
 
 " run rspec async
-let g:rspec_command = "Dispatch bundle exec rspec -f p --color {spec}"
+" let g:rspec_command = "!bundle exec rspec -f p --color {spec}"
+function! g:RunInTmux(cmd)
+  execute "silent " . a:cmd
+  redraw!
+endfunction
+
+let g:rspec_command = "call g:RunInTmux('!tmux select-window -t 2; tmux send-keys \"bundle exec rspec -f d --color {spec}\" \"C-m\"')"
+"let g:rspec_command = "silent !tmux select-window -t 2; tmux send-keys \"bundle exec rspec -f d --color {spec}\" \"C-m\" | redraw!"
+
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
