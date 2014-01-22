@@ -463,6 +463,9 @@ autocmd vimenter * if !argc() && &filetype !=# 'gitcommit' && &filetype !=# 'mai
 " close vim when only NERDTree left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
+" NERDTree hidden files
+let NERDTreeShowHidden=1
+
 " Remove trailing whitespace using F5
 " nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
