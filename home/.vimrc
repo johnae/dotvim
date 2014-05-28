@@ -27,7 +27,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle "tpope/vim-sensible"
 NeoBundle 'tpope/vim-fugitive'
 " NeoBundle 'kien/ctrlp.vim'
-NeoBundle "fholgado/minibufexpl.vim"
+" NeoBundle "fholgado/minibufexpl.vim"
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'tpope/vim-endwise'
 " Move by word but better
@@ -66,7 +66,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle "vim-ruby/vim-ruby"
 NeoBundle 'bling/vim-airline'
 NeoBundle 'Keithbsmiley/rspec.vim'
-NeoBundle 'scrooloose/nerdtree'
+"NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'tpope/vim-surround'
 NeoBundle 'terryma/vim-multiple-cursors'
@@ -76,12 +76,18 @@ NeoBundle "myusuf3/numbers.vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "henrik/vim-ruby-runner"
 
+" GO
+NeoBundle "jnwhiteh/vim-golang"
+
 " Run async commands
 NeoBundle 'tpope/vim-dispatch'
 
 " Run rspec from vim
 NeoBundle 'thoughtbot/vim-rspec'
 
+" Dash integration
+NeoBundle 'rizzatti/funcoo.vim'
+NeoBundle 'rizzatti/dash.vim'
 
 " Show line numbers
 set number
@@ -323,18 +329,18 @@ autocmd BufReadPost,BufNewFile *_spec.rb setlocal commentstring=#\ %s
 "let g:UltiSnipsJumpBackwardTrigger="<c-h>"
 
 " navigate buffers
-nnoremap <Leader>1 :1b<CR>
-nnoremap <Leader>2 :2b<CR>
-nnoremap <Leader>3 :3b<CR>
-nnoremap <Leader>4 :4b<CR>
-nnoremap <Leader>5 :5b<CR>
-nnoremap <Leader>6 :6b<CR>
-nnoremap <Leader>7 :7b<CR>
-nnoremap <Leader>8 :8b<CR>
-nnoremap <Leader>9 :9b<CR>
-nnoremap <Leader>10 :10b<CR>
-nnoremap <Leader>11 :11b<CR>
-nnoremap <Leader>12 :12b<CR>
+"nnoremap <Leader>1 :1b<CR>
+"nnoremap <Leader>2 :2b<CR>
+"nnoremap <Leader>3 :3b<CR>
+"nnoremap <Leader>4 :4b<CR>
+"nnoremap <Leader>5 :5b<CR>
+"nnoremap <Leader>6 :6b<CR>
+"nnoremap <Leader>7 :7b<CR>
+"nnoremap <Leader>8 :8b<CR>
+"nnoremap <Leader>9 :9b<CR>
+"nnoremap <Leader>10 :10b<CR>
+"nnoremap <Leader>11 :11b<CR>
+"nnoremap <Leader>12 :12b<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Unite
@@ -371,7 +377,9 @@ call unite#filters#sorter_default#use(['sorter_rank'])
 nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>y :Unite history/yank<cr>
 " nnoremap <leader>f :Unite file_rec<cr>
-nnoremap <C-P> :<C-u>Unite -resume -no-split -start-insert buffer file_rec/async:!<cr>
+"nnoremap <c-p> :<c-u>unite -resume -no-split -start-insert buffer file_rec/async:!<cr>
+nnoremap <c-p> :<c-u>Unite -resume -no-split -start-insert buffer file file_rec/async<cr>
+"nnoremap <C-P> :<C-u>Unite -resume -no-split -start-insert buffer file_mru<cr>
 " Ctrl-p behaviour
 nnoremap <leader>. :Unite tag<cr>
 " noremap <Leader>p :Unite -start-insert file_rec/async<CR>
@@ -455,16 +463,16 @@ set t_Co=256          " Enable 256 colours
 set ffs=unix,dos,mac  " Use Unix as the standard file type
 
 " NERDTree toggle
-nmap <silent> <C-D> :NERDTreeToggle<CR>
+" nmap <silent> <C-D> :NERDTreeToggle<CR>
 " open nerdtree on startup
 " autocmd vimenter * if &filetype !=# 'gitcommit' && &filetype !=# 'mail' | NERDTree | endif
 " open nerdtree when vim was opened with no file arg
-autocmd vimenter * if !argc() && &filetype !=# 'gitcommit' && &filetype !=# 'mail' | NERDTree | endif
+" autocmd vimenter * if !argc() && &filetype !=# 'gitcommit' && &filetype !=# 'mail' | NERDTree | endif
 " close vim when only NERDTree left open
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " NERDTree hidden files
-let NERDTreeShowHidden=1
+" let NERDTreeShowHidden=1
 
 " Remove trailing whitespace using F5
 " nnoremap <silent> <F5> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
