@@ -79,6 +79,9 @@ NeoBundle "henrik/vim-ruby-runner"
 " GO
 NeoBundle "jnwhiteh/vim-golang"
 
+" Scala
+NeoBundle "derekwyatt/vim-scala"
+
 " Run async commands
 NeoBundle 'tpope/vim-dispatch'
 
