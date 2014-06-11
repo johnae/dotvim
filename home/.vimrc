@@ -82,6 +82,12 @@ NeoBundle "jnwhiteh/vim-golang"
 " Scala
 NeoBundle "derekwyatt/vim-scala"
 
+" Play framework scale
+NeoBundle "gre/play2vim"
+
+" HTML5
+NeoBundle "othree/html5.vim"
+
 " Run async commands
 NeoBundle 'tpope/vim-dispatch'
 
