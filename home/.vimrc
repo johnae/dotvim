@@ -395,7 +395,8 @@ nnoremap <leader>. :Unite tag<cr>
 nnoremap <leader>c :Unite colorscheme -auto-preview<cr>
 
 " jump back and forth between two files using leader leader
-map <leader><leader> <C-^>
+"map <leader><leader> <C-^>
+map <leader>p :bp<cr>
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file
