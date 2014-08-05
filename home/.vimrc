@@ -75,6 +75,8 @@ NeoBundle 'Lokaltog/vim-easymotion'
 NeoBundle "myusuf3/numbers.vim"
 NeoBundle "scrooloose/syntastic"
 NeoBundle "henrik/vim-ruby-runner"
+" Nice search replace
+NeoBundle "nelstrom/vim-qargs"
 
 " GO
 NeoBundle "jnwhiteh/vim-golang"
