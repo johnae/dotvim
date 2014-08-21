@@ -81,6 +81,9 @@ NeoBundle "nelstrom/vim-qargs"
 " GO
 NeoBundle "jnwhiteh/vim-golang"
 
+" Elixir
+NeoBundle "elixir-lang/vim-elixir"
+
 " Scala
 NeoBundle "derekwyatt/vim-scala"
 
