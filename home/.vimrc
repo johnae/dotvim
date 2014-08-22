@@ -81,6 +81,9 @@ NeoBundle "nelstrom/vim-qargs"
 " GO
 NeoBundle "jnwhiteh/vim-golang"
 
+" Mustache/Handlebars
+NeoBundle "mustache/vim-mustache-handlebars"
+
 " Elixir
 NeoBundle "elixir-lang/vim-elixir"
 
