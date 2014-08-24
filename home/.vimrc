@@ -395,7 +395,7 @@ nnoremap <space>/ :Unite grep:.<cr>
 nnoremap <space>y :Unite history/yank<cr>
 " nnoremap <leader>f :Unite file_rec<cr>
 "nnoremap <c-p> :<c-u>unite -resume -no-split -start-insert buffer file_rec/async:!<cr>
-nnoremap <c-p> :<c-u>Unite -resume -no-split -start-insert buffer file file_rec/async<cr>
+nnoremap <c-I> :<c-u>Unite -no-split -start-insert buffer file file_rec/async<cr>
 "nnoremap <C-P> :<C-u>Unite -resume -no-split -start-insert buffer file_mru<cr>
 " Ctrl-p behaviour
 nnoremap <leader>. :Unite tag<cr>
