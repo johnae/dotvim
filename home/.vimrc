@@ -78,6 +78,9 @@ NeoBundle "henrik/vim-ruby-runner"
 " Nice search replace
 NeoBundle "nelstrom/vim-qargs"
 
+" SystemD
+NeoBundle "Matt-Deacalion/vim-systemd-syntax"
+
 " GO
 NeoBundle "jnwhiteh/vim-golang"
 
