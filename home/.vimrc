@@ -78,6 +78,9 @@ NeoBundle "henrik/vim-ruby-runner"
 " Nice search replace
 NeoBundle "nelstrom/vim-qargs"
 
+" Faster yaml for vim 7.4
+NeoBundle "stephpy/vim-yaml"
+
 " SystemD
 NeoBundle "Matt-Deacalion/vim-systemd-syntax"
 
