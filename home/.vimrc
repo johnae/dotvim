@@ -87,6 +87,9 @@ NeoBundle "kana/vim-fakeclip"
 " Rust lang
 NeoBundle "wting/rust.vim"
 
+" TOML
+NeoBundle "cespare/vim-toml"
+
 " SystemD
 NeoBundle "Matt-Deacalion/vim-systemd-syntax"
 
