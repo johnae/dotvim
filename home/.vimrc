@@ -81,6 +81,12 @@ NeoBundle "nelstrom/vim-qargs"
 " Faster yaml for vim 7.4
 NeoBundle "stephpy/vim-yaml"
 
+" FakeClip
+NeoBundle "kana/vim-fakeclip"
+
+" Rust lang
+NeoBundle "wting/rust.vim"
+
 " SystemD
 NeoBundle "Matt-Deacalion/vim-systemd-syntax"
 
