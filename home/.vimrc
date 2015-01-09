@@ -228,6 +228,9 @@ set nobackup
 set noswapfile
 set nowb
 
+" map . to :, why press shift all the time
+nnoremap . :
+
 " Clear search highlight by hitting return again
 " This was very very bad... vim starts up in a weird state
 " nnoremap <esc> :noh<return><esc>
@@ -254,10 +257,15 @@ nmap <leader>s<down>   :rightbelow new<CR>
 " nmap <silent> <A-Left> :wincmd h<CR>
 " nmap <silent> <A-Right> :wincmd l<CR>
 
-map <leader>h :wincmd h<CR>
-map <leader>j :wincmd j<CR>
-map <leader>k :wincmd k<CR>
-map <leader>l :wincmd l<CR>
+" map <leader>h :wincmd h<CR>
+" map <leader>j :wincmd j<CR>
+" map <leader>k :wincmd k<CR>
+" map <leader>l :wincmd l<CR>
+
+" Nice buffer switching
+nmap <leader>k :bprev<CR>
+nmap <leader>j :bnext<CR>
+
 
 " Insert newline without also entering insert mode
 " Enter and Shift-Enter
