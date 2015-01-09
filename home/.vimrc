@@ -19,7 +19,8 @@ if !filereadable(neo_bundle_readme)
 endif
 
 set rtp+=~/.vim/bundle/neobundle.vim
-call neobundle#rc(expand('~/.vim/bundle/'))
+" call neobundle#rc(expand('~/.vim/bundle/')) " deprecated
+call neobundle#begin(expand('~/.vim/bundle/'))
 " Let NeoBundle manage NeoBundle
 NeoBundleFetch 'Shougo/neobundle.vim'
 
@@ -120,6 +121,8 @@ NeoBundle 'thoughtbot/vim-rspec'
 " Dash integration
 NeoBundle 'rizzatti/funcoo.vim'
 NeoBundle 'rizzatti/dash.vim'
+
+call neobundle#end()
 
 " Show line numbers
 set number
