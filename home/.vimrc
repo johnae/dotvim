@@ -85,6 +85,9 @@ NeoBundle "stephpy/vim-yaml"
 " FakeClip
 NeoBundle "kana/vim-fakeclip"
 
+" MoonScript
+NeoBundle "leafo/moonscript-vim"
+
 " Rust lang
 NeoBundle "wting/rust.vim"
 
