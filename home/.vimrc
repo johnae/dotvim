@@ -356,6 +356,7 @@ autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype rspec setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
 autocmd Filetype sh setlocal ts=2 sw=2 sts=2 expandtab
+autocmd FileType mail setlocal fo+=aw
 
 " autocmd BufRead *_spec.rb syn keyword rubyRspec describe context it specify it_should_behave_like before after setup subject its shared_examples_for shared_context let
 " highlight def link rubyRspec Function
