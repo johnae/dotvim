@@ -79,6 +79,9 @@ NeoBundle "henrik/vim-ruby-runner"
 " Nice search replace
 NeoBundle "nelstrom/vim-qargs"
 
+" Coffeescript
+NeoBundle "kchmck/vim-coffee-script"
+
 " Faster yaml for vim 7.4
 NeoBundle "stephpy/vim-yaml"
 
@@ -354,7 +357,7 @@ filetype plugin indent on
 autocmd Filetype html setlocal ts=2 sw=2 expandtab
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype rspec setlocal ts=2 sw=2 sts=2 expandtab
-autocmd Filetype javascript setlocal ts=4 sw=4 sts=0 noexpandtab
+autocmd Filetype javascript setlocal ts=2 sw=2 sts=2 expandtab
 autocmd Filetype sh setlocal ts=2 sw=2 sts=2 expandtab
 autocmd FileType mail setlocal fo+=aw
 
