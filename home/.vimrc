@@ -239,11 +239,12 @@ nnoremap . :
 
 " Clear search highlight by hitting return again
 " This was very very bad... vim starts up in a weird state
-" nnoremap <esc> :noh<return><esc>
-" This is supposed to work better
-augroup no_highlight
-  autocmd TermResponse * nnoremap <esc> :noh<return><esc>
-augroup END
+" 2015-05-25 - no idea why this would make vim start in a weird state anymore, it works just fine
+nnoremap <esc> :noh<return><esc>
+" This is supposed to work better, doesn't work with TERM=screen-256color
+"augroup no_highlight
+"  autocmd TermResponse * nnoremap <esc> :noh<return><esc>
+"augroup END
 
 
 " Split windows
