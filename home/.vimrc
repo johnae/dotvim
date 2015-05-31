@@ -95,6 +95,18 @@ NeoBundle "leafo/moonscript-vim"
 " Rust lang
 NeoBundle "wting/rust.vim"
 
+" Autocomplete for rust (if cargo is available)
+
+if executable("cargo")
+  let $RUST_SRC_PATH=expand('~/Development/rust-src/src')
+  NeoBundle 'phildawes/racer', {
+       \   'build' : {
+       \     'mac': 'cargo build --release',
+       \     'unix': 'cargo build --release',
+       \   }
+       \ }
+endif
+
 " TOML
 NeoBundle "cespare/vim-toml"
 
@@ -146,7 +158,7 @@ set autowrite
 set autoread              
 
 " Allow hidden buffers (eg. not needing to save to switch)
-:set hidden
+set hidden
 
 " Show matching parenthesis etc
 set showmatch
