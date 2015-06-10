@@ -1,5 +1,5 @@
 " First ensure necessary directories are present
-silent !mkdir -p ~/.vim/after 
+silent !mkdir -p ~/.vim/after
 silent !mkdir -p ~/.vim/backups
 silent !mkdir -p ~/.vim/swaps
 silent !mkdir -p ~/.vim/undo
@@ -34,7 +34,7 @@ NeoBundle 'tpope/vim-endwise'
 " Move by word but better
 NeoBundle "bkad/CamelCaseMotion"
 " CSS show the actual color
-NeoBundle "ap/vim-css-color" 
+NeoBundle "ap/vim-css-color"
 " Show git diff of changes
 NeoBundle "ghewgill/vim-scmdiff"
 NeoBundle 'tpope/vim-rails'
@@ -155,7 +155,7 @@ set relativenumber
 set autowrite
 
 " Set to auto read when a file is changed from the outside
-set autoread              
+set autoread
 
 " Allow hidden buffers (eg. not needing to save to switch)
 set hidden
@@ -247,8 +247,8 @@ set nobackup
 set noswapfile
 set nowb
 
-" map . to :, why press shift all the time
-nnoremap . :
+" map . to :, why press shift all the time - ehh no, repeat is good
+" nnoremap . :
 
 " Clear search highlight by hitting return again
 " This was very very bad... vim starts up in a weird state
@@ -283,8 +283,11 @@ nmap <leader>s<down>   :rightbelow new<CR>
 " map <leader>l :wincmd l<CR>
 
 " Nice buffer switching
-nmap <leader>k :bprev<CR>
-nmap <leader>j :bnext<CR>
+"nmap <leader>k :bprev<CR>
+"nmap <leader>j :bnext<CR>
+
+nmap <leader>k :Unite buffer -direction=botright<CR><Up><CR>
+nmap <leader>j :Unite buffer -direction=botright<CR><Down><Down><CR>
 
 
 " Insert newline without also entering insert mode
@@ -381,12 +384,12 @@ autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufReadPost,BufNewFile *_spec.rb setlocal commentstring=#\ %s
 
 " Move smarter by default
-" map w <Plug>CamelCaseMotion_w 
-" map b <Plug>CamelCaseMotion_b 
-" map e <Plug>CamelCaseMotion_e 
-" sunmap w 
-" sunmap b 
-" sunmap e 
+" map w <Plug>CamelCaseMotion_w
+" map b <Plug>CamelCaseMotion_b
+" map e <Plug>CamelCaseMotion_e
+" sunmap w
+" sunmap b
+" sunmap e
 
 "let g:UltiSnipsExpandTrigger="<c-j>"
 "let g:UltiSnipsJumpForwardTrigger="<c-k>"
