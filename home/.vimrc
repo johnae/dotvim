@@ -382,6 +382,7 @@ autocmd FileType mail setlocal fo+=aw
 " highlight def link rubyRspec Function
 autocmd BufReadPost,BufNewFile *_spec.rb set syntax=rspec
 autocmd BufReadPost,BufNewFile *_spec.rb setlocal commentstring=#\ %s
+autocmd BufReadPost,BufNewFile Spookfile set syntax=moon
 
 " Move smarter by default
 " map w <Plug>CamelCaseMotion_w
@@ -525,10 +526,11 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
+set t_Co=256          " Enable 256 colours
+let g:solarized_termcolors=256
 syntax enable
 set background=dark
 colorscheme solarized
-set t_Co=256          " Enable 256 colours
 set ffs=unix,dos,mac  " Use Unix as the standard file type
 
 " NERDTree toggle
